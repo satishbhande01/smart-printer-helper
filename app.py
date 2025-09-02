@@ -63,10 +63,17 @@ st.header("🧾 Step 3: Get Remaining Pages")
 if st.button("Submit"):
     if bwc:
         try:
-            rm = main.PrinterString(pages, bwc)
-            result = rm.printer_str()
-            st.badge("Remaining Pages",color="green")
-            st.code(result, language="")  # No language needed, just plain text
+            #For Colored Pages
+            colored = main.PrinterString(pages, bwc)
+            colored_result = rm.printer_str()
+            #For B/W pages
+            bw = main.PrinterString(pages, colored_result)
+            bw_result = rm.printer_str()
+            #Outputs
+            st.badge("Colored Pages",color="green")
+            st.code(color_result, language="")  # No language needed, just plain text
+            st.badge("Black and White Pages",color="blue")
+            st.code(bw_result, language="")
 
         except Exception as e:
             st.error(f"⚠️ Error processing input: {e}")
