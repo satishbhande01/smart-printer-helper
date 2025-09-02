@@ -71,7 +71,7 @@ if st.button("Submit"):
             bw_result = bw.printer_str()
             #Outputs
             st.badge("Colored Pages",color="green")
-            st.code(color_result, language="")  # No language needed, just plain text
+            st.code(colored_result, language="")  # No language needed, just plain text
             st.badge("Black and White Pages",color="blue")
             st.code(bw_result, language="")
 
