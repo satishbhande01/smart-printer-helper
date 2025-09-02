@@ -65,10 +65,10 @@ if st.button("Submit"):
         try:
             #For Colored Pages
             colored = main.PrinterString(pages, bwc)
-            colored_result = rm.printer_str()
+            colored_result = colored.printer_str()
             #For B/W pages
             bw = main.PrinterString(pages, colored_result)
-            bw_result = rm.printer_str()
+            bw_result = bw.printer_str()
             #Outputs
             st.badge("Colored Pages",color="green")
             st.code(color_result, language="")  # No language needed, just plain text
