@@ -70,9 +70,9 @@ if st.button("Submit"):
             bw = main.PrinterString(pages, colored_result)
             bw_result = bw.printer_str()
             #Outputs
-            st.badge("Colored Pages",color="green")
+            st.badge("Black and white Pages",color="green")
             st.code(colored_result, language="")  # No language needed, just plain text
-            st.badge("Black and White Pages",color="blue")
+            st.badge("Colored Pages",color="blue")
             st.code(bw_result, language="")
 
         except Exception as e:
